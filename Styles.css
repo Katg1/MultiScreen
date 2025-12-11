@@ -1,0 +1,47 @@
+/* 
+  Global styles for the multiscreen video installation.
+  The layout is intentionally minimal to highlight the video content.
+*/
+
+body {
+  background: #342932;
+  color: white;
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+/* 3×3 responsive grid */
+#screens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* Individual screens */
+.fScreen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border: 2px solid #555;
+  border-radius: 4px;
+}
+
+/* Interaction affordance */
+.fScreen:hover {
+  cursor: pointer;
+}
+
+/* Interactive filter effects */
+.invert {
+  filter: invert(100%);
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+/* The Instructions box */
+#usersManual {
+  margin-top: 20px;
+  white-space: pre-line; /* Preserve line breaks for formatting */
+}
